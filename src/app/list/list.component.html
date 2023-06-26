@@ -1,0 +1,21 @@
+<h2>Welcome to the Star Wars Encycopledia</h2>
+<div class="cards">
+  <ng-container *ngFor="let card of cardOptions">
+    <mat-card class="card" (click)="onClickCard(card)">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{ card.title }}</mat-card-title>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="{{card.image}}"
+        alt="{{card.imageDescription}}"
+      />
+      <mat-card-content>
+        <p>
+          {{card.description}}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>
