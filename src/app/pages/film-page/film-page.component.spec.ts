@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListComponent } from './list.component';
+import { FilmPageComponent } from './film-page.component';
 
-describe('ListComponent', () => {
-  let component: ListComponent;
-  let fixture: ComponentFixture<ListComponent>;
+describe('FilmPageComponent', () => {
+  let component: FilmPageComponent;
+  let fixture: ComponentFixture<FilmPageComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ListComponent]
+      declarations: [FilmPageComponent]
     });
-    fixture = TestBed.createComponent(ListComponent);
+    fixture = TestBed.createComponent(FilmPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

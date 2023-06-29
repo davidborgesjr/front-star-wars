@@ -1,11 +1,3 @@
-.card {
-  background-color: dodgerblue;
-  color: white;
-  padding: 1rem;
-  max-width: 300px;
-  cursor: pointer;
-}
-
 .cards {
   max-width: 1200px;
   display: grid;

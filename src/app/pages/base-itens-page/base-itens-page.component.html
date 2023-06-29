@@ -1,0 +1,22 @@
+<mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+<ng-container *ngIf="!isLoadingResults">
+  <div class="cards">
+    <ng-container *ngFor="let item of itensList">
+      <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>
+              <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+              <p>{{ item.title }}</p>
+            </mat-card-title>
+            <mat-card-subtitle>{{ item.subtitle }}</mat-card-subtitle>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          {{ item.content }}
+        </mat-card-content>
+      </mat-card>
+
+    </ng-container>
+  </div>
+</ng-container>
