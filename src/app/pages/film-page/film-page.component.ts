@@ -6,7 +6,8 @@ import { IItemData } from 'src/model/item-data.interface';
 
 @Component({
   selector: 'app-film-page',
-  templateUrl: './../base-itens-page/base-itens-page.component.html'
+  templateUrl: './../base-itens-page/base-itens-page.component.html',
+  styleUrls: ['./../base-itens-page/base-itens-page.component.css']
 })
 export class FilmPageComponent extends BaseItensPageComponent implements OnInit {
 
