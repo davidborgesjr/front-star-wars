@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs/internal/Observable';
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { IItemData } from 'src/model/item-data.interface';
@@ -10,10 +11,8 @@ import { IItemData } from 'src/model/item-data.interface';
 export class BaseItensPageComponent {
 
   isLoadingResults = true;
-  itensList: IItemData[] = [];
+  itensList: Observable<IItemData[]>;
 
-  constructor(protected apiService: ApiService) {
-    console.log('-------- BASE ITENS PAGE COMPONENT --------------');
-   }
+  constructor(protected apiService: ApiService) {}
 
 }

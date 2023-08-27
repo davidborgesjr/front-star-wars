@@ -13,7 +13,7 @@ export class FilmPageComponent extends BaseItensPageComponent implements OnInit 
 
   ngOnInit(): void {
     this.isLoadingResults = true;
-    this.apiService
+    this.itensList = this.apiService
       .getAllFilms()
       .pipe(
         map(allFilms => {
@@ -25,12 +25,8 @@ export class FilmPageComponent extends BaseItensPageComponent implements OnInit 
               content: film.opening_crawl
             } as IItemData;
           })
-        }),
-        tap(allFilms => {
-          this.isLoadingResults = false;
-          this.itensList = [...allFilms];
         })
-      ).subscribe()
+      );
   }
 
 }

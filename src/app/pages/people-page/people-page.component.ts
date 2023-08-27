@@ -13,7 +13,7 @@ export class PeoplePageComponent extends BaseItensPageComponent implements OnIni
 
   ngOnInit(): void {
     this.isLoadingResults = true;
-    this.apiService
+    this.itensList = this.apiService
       .getAllPeople()
       .pipe(
         map(allPeople => {
@@ -29,9 +29,8 @@ export class PeoplePageComponent extends BaseItensPageComponent implements OnIni
         }),
         tap(allPeople => {
           this.isLoadingResults = false;
-          this.itensList = [...allPeople];
         })
-      ).subscribe()
+      );
   }
 
 }
